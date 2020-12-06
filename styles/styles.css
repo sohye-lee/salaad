@@ -1,0 +1,179 @@
+/* =============== SETTINGS ================ */
+
+:root {
+    /* colors */
+    --Black: rgb(50,50,50);
+    --White: rgb(240,240,240);
+    --DarkGray: rgb(78, 78, 78);
+    --Smoke: rgb(211, 211, 211);
+    --Pink: rgb(240, 50, 82);
+    --Lime: rgb(121, 250, 121);
+    --Blue: rgb(27, 27, 250);
+    --Sky: rgb(41, 184, 240);
+    --Green: rgb(17, 80, 17);
+    --Purple: rgb(49, 10, 49);
+
+    /* forms */
+    --Border: 4px;
+    --MaxWidth: 1280px;
+}
+
+body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+}
+.align-items-center {
+    display: flex; 
+    align-items: center;  
+    justify-content: center;
+}
+
+.btn {
+    margin: 15px 0;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 18px;
+    outline: none;
+    text-decoration: none;
+}
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.brightmode {
+    color: var(--Green);
+}
+
+.brightmode__bg {
+    background-color: var(--Green);
+    color: var(--White);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    } 
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ++++++++++++++++++ NAVBAR ++++++++++++++++++ */
+
+#navbar {
+    background: transparent;
+    max-width: var(--MaxWidth);
+    margin: 0 auto;
+}
+
+#navbar__toggler {
+    font-size: 1.7rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    margin: 0 5px;
+    transition: all 350ms ease;
+}
+
+.nav-link:hover {
+    color: var(--Pink)
+}
+
+.active .brightmode {
+    border: 1px solid var(--Green);
+    border-radius: 3px;
+    opacity: 1;
+    font-weight: 900;
+}
+
+/* ++++++++++++++++++ NAVBAR ++++++++++++++++++ */
+
+#front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('img/bg/bg-img5.jpg') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+}
+
+#front__content {
+    max-width: var(--MaxWidth);
+    width: 90%;
+}
+
+#front__content__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#front__imagebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#front__image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    animation: spin 40s linear infinite;
+    -webkit-filter: drop-shadow(20px 20px 30px rgba(0,0,0,.5));
+    filter: drop-shadow(20px 20px 30px rgba(0,0,0,.5));
+    display:inline-block;
+    z-index: 3;
+}
+
+#front__titlebox {
+    margin-top: 50px;
+}
+#front__title {
+    font-size: 3.5rem;
+}
+
+#front__btn {
+    transition: all 350ms ease;
+}
+#front__btn:hover{
+    color: var(--White);
+    background-color: var(--Pink);
+}
+
+/* ++++++++++++++++++ SERVICE ++++++++++++++++++ */
+
+#service {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* ++++++++++++++++++ RESPONSIVE ++++++++++++++++++ */
+
+@media all and (max-width: 768px) {
+    #front__titlebox {
+        text-align: center;
+    }
+
+    #front__imagebox {
+        display: flex;
+        justify-content: center;
+    }
+    #front__image {
+        max-width: 80%;
+    }
+}
