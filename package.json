@@ -1,0 +1,19 @@
+{
+  "name": "6_salaad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "author": "sohye",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "bootstrap-social": "^5.1.1",
+    "jquery": "^3.5.1",
+    "lite-server": "^2.6.1",
+    "popper.js": "^1.16.1"
+  }
+}
