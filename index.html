@@ -43,14 +43,19 @@
               <a class="nav-link brightmode" href="#menu">menu</a>
             </li>
             <li class="nav-item brightmode">
+                <a class="nav-link brightmode" href="#pickup">pickup</a>
+            </li>
+            <li class="nav-item brightmode">
                 <a class="nav-link brightmode" href="#service">service</a>
             </li>
             <li class="nav-item brightmode">
                 <a class="nav-link brightmode" href="#reviews">reviews</a>
             </li>
             <li class="nav-item brightmode">
-                <a class="nav-link brightmode" href="#contact">contact</a>
-            </li>
+              <button id="nav__contact__btn" type="button" class="nav-link brightmode" data-toggle="modal" data-target="#contact__modal">
+                contact
+              </button>
+          </li>
           </ul>
         </div>
       </nav>
@@ -65,7 +70,7 @@
                     <button class="btn brightmode__bg" id="front__btn" href="menu.pdf" download="menu.pdf">download our menu</button>
                 </div>
                 <div class="col-12 col-md-7 order-1 order-md-2" id="front__imagebox">
-                    <img src="/styles/img/food/dish1.png"  alt="home image" id="front__image">
+                    <img src="/styles/img/food/dish.png"  alt="home image" id="front__image">
                 </div>
             </div>
         </div>
@@ -78,13 +83,85 @@
         </div>
     </section>
 
+    <div class="modal fade" id="contact__modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title title pink" id="contact__modal__title">Contact Us 24/7</h5>
+            <button style="outline:none;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Password</label>
+                  <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <div class="form-group">
+                <label for="inputAddress2">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">City</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">State</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Select</option>
+                    <option value="DC">DC</option>
+                    <option value="FL">FL</option>
+                    <option value="MD">MD</option>
+                    <option value="VA">VA</option>
+                    <option value="WV">WV</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip">Zip</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <div class="row justify-content-center" id="modal__btns">
+                <button type="submit" class="btn btn-md black__bg ">Sign in</button>
+                <button type="button" class="btn btn-md pink__bg mx-3 " data-dismiss="modal">Close</button>    
+              </div>
+            </form>
+
+
+          </div>
+          <!-- <div class="modal-footer">
+          </div> -->
+        </div>
+      </div>
+    </div>
+
     <!-- ++++++++++++++++++ SERVICE ++++++++++++++++++ -->
 
     <section id="service">
         <div  id="service__content">
             <div  id="service__title">
-              <h1 class="title">Delivery food can be healthier</h1>
-              <h5>We bring you an affordable, healthy alternative to fast food, knowing that your time is valuable and you care about what you put in your body. We are a take-out restaurant, allowing you the flexibility of eating at work, home, or one of your other favorite locations.</h5>
+              <h1 class="title mb-5">Delivery food can be healthier</h1>
+              <h5>We bring you an affordable, healthy alternative to fast food, <br>knowing that your time is valuable and you care about what you put in your body.</h5>
             </div>
             <div id="service__cards">
               <div id="service__card">
@@ -120,9 +197,9 @@
         <div class="container">
 
           <div class="row">
-            <div class="col-10" id="menu__titlebox">
-              <h1 id="menu__title" class=" title">Enjoy Our Healthy Menu</h1>
-              <h5 id="menu__description" class="mt-4"></h5>
+            <div class="col-10"  id="menu__titlebox">
+              <h1 id="menu__title black" class=" title">Enjoy Our Healthy Menu</h1>
+              <a href="#order"><button id="menu__button" class="mt-4 btn brightmode__bg justify-content-center">start order</button></a>
             </div>
           </div>
 
@@ -162,7 +239,7 @@
               </div>
 
               <div class="card" id="menu__card">
-                <img class="card-img-top" id="menu__card__img" src="/styles/img/food/dish2.png" alt="menu image">
+                <img class="card-img-top" id="menu__card__img" src="/styles/img/food/dish.png" alt="menu image">
                 <div class="card-body">
                   <h5 class="card-title title" id="menu__card__title">Sound Of Music</h5>
                   <p class="card-text" id="menu__card__info">470 KCAL <br>Vegan Meat, Basil, Rice, Tomatoes, Onions, Spicy Sauce...</p>
@@ -206,6 +283,8 @@
         <div class="row justify-content-center" id="reviews__titlebox">
           <div class="col-9 justify-content-center" id="reviews__title">
             <h1 class="title brightmode">Our Customers Said</h1>
+            <p class="brightmode">Visit our instagram for more reivews</p>
+            <a href="#"><i class="fa fa-instagram brightmode"></i> </a>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -248,12 +327,102 @@
 
     <!-- ++++++++++++++++++ ORDER++++++++++++++++++ -->
     <section id="order">
-
+      <div class="container" id="order__content">
+        <div class="row" id="order__titlebox">
+          <div class="col-12" id="order__title">
+            <h1 class="title white">Easy Order With Our New App</h1>
+          </div>
+        </div>
+        <div class="row flex-column flex-md-row mt-5" id="order__description">
+          <div class="col-12" id="appdown__info">
+            <h6 class="white">Click to download our new app</h6>
+            <div class="col-12 col-lg-10 col-xl-8 row justify-content-center">
+              <button class="col-5 btn brightmode__bg mr-2" id="app__btn"><i class="fa fa-apple mr-1"></i> iOS</i></button>
+              <button class="col-5 btn brightmode__bg" id="app__btn"><i class="fa fa-android mr-1"></i> Android</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-10 col-lg-8 col-xl-7 mt-3" id="mockup__imagebox">
+            <img id="mockup__img" src="/styles/img/mockup.png" alt="mockup">
+          </div>
+        </div>
+      </div>
     </section>
    
-    <!-- ++++++++++++++++++ CONTACT ++++++++++++++++++ -->
+    <!-- ++++++++++++++++++ PICKUP ++++++++++++++++++ -->
+    <section id="pickup">
+      <div id="pickup__content">
+        <div class="container my-3" id="pickup__titlebox">
+          <div class="row my-3">
+            <div class="col-12 text-center">
+              <h1 class="title brightmode my-5" id="pickup__title">Plan Your Pickup</h1>
+            </div>
+          </div>
+          <div class="row" id="pickup__info">
+            <div id="pickup__map" class="order-2 order-lg-1 col-12 col-lg-6 z-depth-1-half map-container d-none d-md-flex">
+              <iframe src="https://maps.google.com/maps?q=Magnolia+Dessert+Bar+%26+Coffee&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+            </div>
+            <div class="order-1 order-lg-2 my-3 col-lg-5 row" id="pickup__contactbox">
+              <div class="col-8 col-lg-12" id="pickup__contact">
+                <div class="row my-4" id="pickup__openhours">
+                  <div class="col-4 brightmode" id="openhours__days">
+                    <p>Mon - Fri </p>
+                    <p>Sat</p>
+                    <p>Sun</p>
+                  </div>
+                  <div class="col-7 brightmode text-right" id="openhours__hours">
+                    <p>8 AM - 8 PM</p>
+                    <p>8 AM - 5 PM</p>
+                    <p>9 AM - 2 PM</p>
+                  </div>
+                </div>
+                <div class="row" id="pickup__contactinfo">
+                  <p><a href="/" class="brightmode"><i class="fa fa-home mr-1 brightmode"></i> 12802 Lee Highway, Fairfax, VA 22031</a></p>
+                  <p><a href="mailto:info@salaad.com" class="brightmode"><i class="fa fa-envelope mr-1 brightmode"></i> info@salaad.com</a></p>
+                  <p><a href="tel:+12018775910" class="brightmode"><i class="fa fa-mobile mr-2 brightmode"></i> +1 201-877-5910</a></p>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ++++++++++++++++++ FOOTER ++++++++++++++++++ -->
+    <section id="footer">
+      <div class="container" id="footer__content">
+        
+        <div class="row justify-content-center">
+          <div class="col-3" id="footer__sitemap">
+            <h5>SITEMAP</h5>
+            <h6><a href="#front" id="sitemap__item">home</a></h6>
+            <h6><a href="#service" id="sitemap__item">service</a></h6>
+            <h6><a href="#menu" id="sitemap__item">menu</a></h6>
+            <h6><a href="#reviews" id="sitemap__item">reviews</a></h6>
+            <h6><a href="#order" id="sitemap__item">order</a></h6>
+            <h6><a href="#pickup" id="sitemap__item">pickup</a></h6>
+          </div>
+          <div class="col-4 justify-content-center" id="footer__links">
+            <h3 class="justify-content-center">
+              <a href="" id="social__link"><i class="fa fa-instagram mr-3"></i></a>
+              <a href="" id="social__link"><i class="fa fa-twitter mr-3"></i></a>
+              <a href="" id="social__link"><i class="fa fa-facebook"></i></a>
+            </h3>
+            <a href="#order"><button class="btn brightmode__bg">download our app</button></a>
+          </div>
+          <div class="col-4" id="footer__contact">
+            <p><a href="/"><i class="fa fa-home mr-1"></i> 12802 Lee Highway, Fairfax, VA 22031</a></p>
+            <p><a href="mailto:info@salaad.com"><i class="fa fa-envelope mr-1"></i> info@salaad.com</a></p>
+            <p><a href="tel:+12018775910"><i class="fa fa-mobile mr-2"></i> +1 201-877-5910</a></p>
+          </div>
+        </div>
+        <div class="col-12 row justify-content-center mt-3">
+          <div class="col-4 text-center">
+            <p>&copy 2020 Salaad LLC All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- ++++++++++++++++++ JS LINKS ++++++++++++++++++ -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
