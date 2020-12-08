@@ -63,10 +63,10 @@ var isTogglerClicked = false;
 toggler.addEventListener('click', function() {
     if (!isTogglerClicked) {
         navBg.style.height = '37vh'
-        isTogglerClicked = false;
+        isTogglerClicked = true;
     } else {
         navBg.style.height = '80px';
-        isTogglerClicked = true;
+        isTogglerClicked = false;
     }
 });
 
